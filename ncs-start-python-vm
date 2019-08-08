@@ -1,0 +1,27 @@
+#!/bin/sh
+
+pypath="${NCS_DIR}/src/ncs/pyapi"
+
+# Make sure everyone finds the NCS Python libraries at startup
+if [ "x$PYTHONPATH" != "x" ]; then
+    PYTHONPATH=${pypath}:$PYTHONPATH
+else
+    PYTHONPATH=${pypath}
+fi
+export PYTHONPATH
+
+main="${pypath}/ncs_pyvm/startup.py"
+# input argument 6 is the package name
+# bin/python3packages.txt is in a bin folder in the NSO runtime folder
+echo "Starting ${main} $*"
+if [ ! -z $(grep $6 "bin/python3packages.txt") ]; then
+    echo "Starting python v3 vm for package $6"
+    exec python3 -u ${main} $*
+else
+    echo "Starting python v2 vm for package $6"
+    exec python -u ${main} $*
+fi
+
+
+
+
