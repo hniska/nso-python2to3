@@ -40,6 +40,21 @@ ncs --stop
 ncs
 ```
 
+##
+Converting a python package from python2 to python3 is often as easy as running the 2to3 script on your .py file.
+
+To see what it would change run
+```
+2to3 main.py
+```
+
+To do the changes directly to the file
+```
+2to3 -w main.py
+```
+
+Of course 2to3 cant cope with all differences but it takes you quite far. To read up on it a bit more have a look here [in the official porting doc](https://docs.python.org/3/howto/pyporting.html) where it discuss things like text versus binary data, where in python2 you could just use str() on almost everything and it worked. Now you might have to add a .decode('utf-8') or something like that.
+
 ## Contact
 
 Contact Hakan Niska <hniska@cisco.com> with any suggestions or comments. If you find any bugs please fix them and send me a pull request.
