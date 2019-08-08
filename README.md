@@ -25,7 +25,7 @@ vi ncs.conf
 
 ```
 
-Then just add the packages you want to be running under python3 to the python3packages.txt file
+Then just add the packages you want to be running with python3 to the python3packages.txt file
 
 ```
 cat python3packages.txt
