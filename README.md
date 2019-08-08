@@ -7,7 +7,7 @@ Small headsup, this script is not a supported solution :)
 
 ## Installation
 
-If you are running a local installation (i.e not a system install) you just have to create a bin folder in you NSO runtime folder and copy the two files there
+If you are running a local installation (i.e not a system install) you just have to create a bin folder in you NSO runtime folder and copy/create these two files there
 ```
 cd your_nso_runtime/
 mkdir bin
