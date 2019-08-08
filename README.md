@@ -40,7 +40,7 @@ ncs --stop
 ncs
 ```
 
-##
+## Converting
 Converting a python package from python2 to python3 is often as easy as running the 2to3 script on your .py file.
 
 To see what it would change run
