@@ -11,7 +11,7 @@ If you are running a local installation (i.e not a system install) you just have
 ```
 cd your_nso_runtime/
 mkdir bin
-cp path_to/nso-python2to3/ncs-start-python-vm bin/
+cp python2to3/ncs-start-python-vm bin/
 touch bin/python3packages.txt
 ```
 then change your ncs.conf so that it executes your new ncs-start-python-vm script intead of the default one.
